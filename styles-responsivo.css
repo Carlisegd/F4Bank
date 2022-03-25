@@ -1,0 +1,928 @@
+
+/* ===================================== GOOGLE FONTS ===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+/* ===================================== VARIABLES ===================================== */
+:root{
+    /* =================== COLOR =================== */
+    --cor-principal-menu: linear-gradient(90deg, #F2884B 30%, #F2AC52, #F29F80);;
+    --cor-menu-mobile: linear-gradient(90deg, #F2884B 30%, #F2AC59, #F29F80);
+    --cor-fonte-menu: white;
+    --cor-hover-menu: #444140;
+
+    /* =================== TYPOGRAPHY =================== */
+    --font-body: 'Nunito', sans-serif;
+
+    --altura-menu: 4rem;
+    --padding-vertical-menu: 0 2rem;
+    --padding-menu-items: .5rem;
+    --gap-menu-items-desktop: .5rem;
+    --border-radius-menu-items: 1rem;
+    --transicao-hover-menu-items: 1s;
+    --tamanho-logo-menu: 100%;
+    --icone-btn-mobile: 3rem;
+}
+
+/* =================== BASE =================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif; 
+}
+
+/* =================== MENU STYLING =================== */
+.container-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: var(--altura-menu);
+    padding: var(--padding-vertical-menu);
+    background-image: var(--cor-principal-menu);
+    z-index: 20;
+}
+
+.menu-items{
+    display: flex;
+    gap: var(--gap-menu-items-desktop);
+}
+
+#lista-menu{
+    list-style: none;
+}
+
+.item{
+    text-decoration: none;
+    padding: var(--padding-menu-items);
+    color: var(--cor-fonte-menu);
+    border-radius: var(--border-radius-menu-items);
+}
+
+.item:hover{
+    background-color: var(--cor-hover-menu);
+    transition: var(--transicao-hover-menu-items);
+}
+
+#logo-menu{
+    height: var(--tamanho-logo-menu);
+}
+
+#check{
+    display: none;
+}
+
+.bx-menu-open{
+    display: none;
+    height: var(--icone-btn-mobile);
+    cursor: pointer;
+}
+
+
+/* =================== ESTILIZAÇÃO CONTEÚDO =================== */
+.container-main{
+  display: flex;
+  flex-direction: column;
+  padding: var(--altura-menu) 0 0 0;
+  height: 100%;
+  min-height: 100%;
+  flex-grow: 1;
+}
+
+
+/* =================== PRIMEIRA SEÇÃO =================== */
+
+.primeira-secao{
+  display: flex;
+  
+  /* width: 100%; */
+  color:#363636;
+}
+
+.box-secao1{
+  color: #363636;
+  /* padding-bottom: 1rem; */
+  background-color: #FFFF;
+  /* padding-top: 1rem; */
+  background-image: url("imagensF4BANK/foto_fundo4.png");
+  background-position: center;
+}
+
+.titulo{
+  font-size: 1.875rem;
+  padding: 1em 1.6em;
+  max-width: 500px;
+  font-weight: bold;
+
+}
+
+.subtitulo{
+  padding: .5em 2.3em;
+  max-width: 400px;
+}
+
+.lista{
+  padding: .5em 3.3em;
+  max-width: 300px;
+}
+
+.gif-app{
+  position: relative;
+  width: 20%;
+  margin-left: 5px;
+  bottom: 10px;
+}
+
+/* =================== PARTE DOIS =================== */
+.parte-dois{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  background-image: url("imagensF4BANK/foto_fundo.png");
+  background-position: center;
+  background-color: #d15407;
+  
+  
+}
+
+.foto-fundo{
+display: flex;
+position: relative;
+
+}
+
+.fotos-parte-dois{
+  width: 60%;
+  height: 60%;
+}
+
+
+.texto-cartao{
+  line-height: 1.7;
+  font-size: 15px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.lista-cartao{
+  list-style: none;
+  padding-top: 40px;
+  font-size: 15px;
+  padding-bottom: 40px;
+}
+
+.foto-pessoas{
+  position: relative;
+  width: 80%; 
+  margin:40px;
+  animation: 3s move;
+
+}
+
+.foto-cartao-frente, .foto-cartao {
+background-color: transparent;
+animation: spin 10s linear infinite;
+width: 50%;
+
+}
+
+  @keyframes spin {
+    0% {
+     transform: rotateZ(0deg);
+    }
+    100% {
+     transform: rotateZ(360deg);
+    }
+   }
+
+.conteudo-conta-digital-pj{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #363636;
+  padding: 30px;
+  background-image: url("imagensF4BANK/foto-fundo4.png");
+  background-position: center;
+}
+
+.conteudo-conta-pj{
+  width: 100%;
+  height: 100%;
+  padding-left: 200px;
+}
+
+.texto-conta-pj, .texto-conta-digital-pf{
+font-size: 50px;
+font-weight: bold;
+padding-top: 10px;
+}
+
+.lista-conta-pj{
+  list-style: none;
+  padding-top: 40px;
+  font-size: 15px;
+}
+
+
+.foto-escritorio{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-right: 100px;
+  animation: 2s move;
+}
+
+@keyframes move {
+  from {
+      right: 20%;
+  }
+  to {
+    right: 40%;
+  }
+}
+
+
+/* =================== TERCEIRA SEÇÃO =================== */
+.terceira-secao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #363636;
+  background-image: url("imagensF4BANK/foto-fundo2.png");
+  background-position: center;
+  background-color: #ff914d;
+  
+  
+  
+}
+
+.texto-coracao{
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 100px;
+}
+
+.texto-coracao2{
+  display: block;
+  font-size: 20px;
+  line-height: 1.7;
+  padding-right: 300px;
+  padding-left: 100px;
+}
+
+.imagem-container03{
+    width: 100%;
+    padding-right: 100px;
+    margin: 30px;
+
+
+}
+
+/* =================== ESTILIZAÇÃO RODAPÉ =================== */
+.containerFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+    background-color: #444140;
+    color: azure;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin-top: auto;
+    clear: both;
+}
+
+.parte1{
+    
+    border-bottom: 2px solid rgba(0, 0, 0, .06);
+    padding-bottom: 1em;
+    margin-left: 180px;
+}
+
+.parte2{
+    padding: 1em;
+    align-self: center;
+    margin-right: 30px;
+}
+
+.lista-parte1{
+    list-style: none;
+}
+
+footer div ul li a{
+    text-decoration: none;
+    color: white;
+}
+footer div ul li a:hover{
+    color: #F2884B;
+    transition: .2s;
+
+}
+
+.texto1{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    padding: 1rem 1rem;
+
+}
+
+
+.texto2{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    padding: 1rem 1rem;
+}
+
+.texto3{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    padding: 1rem 1rem;
+    margin-left: 180px;
+}
+
+
+.redesSociais{
+    cursor: pointer;
+    list-style: none;
+
+}
+
+.redesSociais a img:hover{
+    color:  #F2884B;
+    transition: .2s;
+    list-style: none;
+}
+
+.linkRedes {
+  display: flex;
+  list-style: none;
+  margin-left:20px;
+  margin-top: 15px;
+}
+
+.icone-links{
+margin-left:10px;
+}
+
+svg:hover path{
+    fill:  #F2884B;
+}
+
+
+
+    /* =================== PRIMEIRA SEÇÃO =================== */
+
+    .primeira-secao{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* =================== SEGUNDA SEÇÃO =================== */
+
+    .segunda-secao{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .box-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .box-secao2{
+        width: 100%;
+        height: 100%;
+    }
+
+    .imagem-celular{
+        width: 90%;
+    }
+
+    /* =================== TERCEIRA SEÇÃO =================== */
+
+    .terceira-secao{
+        background-repeat: no-repeat;
+        background-position:top ;
+        background-size: cover;
+    }
+
+    .imagem-container03{
+        height: 50%;
+    }
+
+    /* =================== RODAPÉ =================== */
+
+    .containerFooter{
+      display: flex;
+      justify-content: center;
+      align-items:flex-start  ;
+      background-color: #444140;
+      color: azure;
+      width: 100%;
+      /* height: auto; */
+      /* padding: 2rem;
+      margin-top: auto; */
+      clear: both;
+  }
+  
+  .parte1{
+      display: flex;
+  }
+
+
+/* Solicitando cartão */
+
+.solicitar-conta {
+    top: 100px;
+    right: 0;
+    position: absolute;
+    background-color: transparent;
+    background-image: url("imagensF4BANK/foto-fundo5.png") ;
+    background-repeat: no-repeat;
+    width: 340px;
+    height: 344px;
+    text-align: center;
+    
+  }
+  
+  .solicitar-conta h2 {
+    margin-top: 50px;
+    color: #fff;
+    font-size:20px;
+    text-align: center;
+    margin-right: 80px;
+    
+    margin-left: 60px;
+  }
+  
+  .solicitar-conta button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    margin-right: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #444140;
+    font-size: 12px;
+    width: 100px;
+    transition: .3s;
+    cursor: pointer;
+    text-align: center;
+
+  }
+  
+  .solicitar-conta button:hover {
+    background-color:blanchedalmond;
+    }
+  
+  .solicitar-conta::before {
+    position: relative;
+    top: 210px;
+    right: -70px;
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border-right: 0.2em solid #fff;
+    border-top: 0.2em solid #fff;
+    transform: rotate(45deg);
+    margin-right: 0.5em;
+  }
+      /* =================== RESPONSIVIDADE =================== */
+
+    /* =================== RESPONSIVIDADE PRIMERA PARTE =================== */
+
+  @media screen and (max-width: 375px){
+     
+      .primeira-secao{
+        display: flex;
+        width: 100%;
+        padding: 0.2em;
+        color:#363636;
+      }
+      
+      .box-secao1{
+        color: #363636;
+        /* padding-bottom: 1rem; */
+        background-color: #FFFF;
+        /* padding-top: 1rem; */
+        /* background-image: url("imagensF4BANK/foto_fundo4.png");
+        background-position: center; */
+      }
+      
+      .titulo{
+        font-size: 0.90rem;
+        padding: 1em 1em;
+        max-width: 11rem;
+        font-weight: bold;
+      
+      }
+      
+      .subtitulo{
+        padding: .2em 1em;
+        max-width: 9rem;
+        font-size: 0.70rem;
+      }
+          
+      .gif-app{
+        position: relative;
+        width: 30%;
+        height: 30%;
+        bottom: 0rem;
+        margin-top: 0rem;
+        margin-right: 7rem;
+      }
+
+      .solicitar-conta {
+        display: block;
+        top: 2rem;
+        height: 0rem;
+        text-align: center;
+        padding-left: 11.5rem;
+
+      }
+
+      .solicitar-conta2 {
+        display: block;
+        top: 2rem;
+        height: 0rem;
+        text-align: center;
+        left: 1rem;
+
+      }
+
+      
+
+      /* .solicitar-conta{
+        display: none;
+    } */
+      
+      .solicitar-conta h2 {
+        margin-top: 3rem;
+        color:#d15407;
+        font-size: 0.70rem;
+        text-align: center;
+        margin-right: 1rem;
+        
+        
+      }
+      
+      .solicitar-conta button {
+        margin-top: 0rem;
+        padding: 0.5rem 0.5rem;
+        margin-right: 1rem;
+        border: none;
+        border-radius: 1rem;
+        background-color:#F2884B;
+        color: white;
+        font-size: 0.65rem;
+        width: 4rem;
+        transition: .3s;
+        cursor: pointer;
+        text-align: center;
+      }
+      
+      .solicitar-conta button:hover {
+        background-color:blanchedalmond;
+        }
+      
+      .solicitar-conta::before {
+        position: relative;
+        top: 7.4rem;
+        left: 3rem;
+        content: "";
+        display: inline-block;
+        width: 0.2em;
+        height: 0.2em;
+        border-right: 0.2em solid #363636;
+        border-top: 0.2em solid #363636;
+        transform: rotate(45deg);
+        margin-right: 0.5em;
+      }
+  } 
+
+/* =================== PARTE DOIS =================== */
+@media screen and (max-width: 375px){
+      
+        .parte-dois{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 100%;
+        /* background-image: url("imagensF4BANK/foto_fundo.png");
+        background-position: center; */
+        background-color: #d15407;
+      }
+
+      .foto-fundo{
+      /* display:none; */
+      display: flex;
+      position: relative;
+
+      } 
+
+      .fotos-parte-dois{
+        /* display: none; */
+        width: 20%;
+        height: 10%;
+      } 
+
+      .conteudo-cartao{
+        margin-top: 1rem;
+        height: 100%;
+        /* padding-right: 10px;
+        right: 50px; */
+        margin-left: 0.5rem;
+      }
+
+      .texto-conta-pj, .texto-conta-digital-pf{
+        font-size: 1.50rem;
+        font-weight: bold;
+      }
+
+      .texto-cartao{
+        display: flex;
+        line-height: 1.7;
+        font-size: 0.90rem;
+        padding-top: 0rem;
+        font-weight: bold;
+        
+      }
+
+      .lista-conta-pj{
+        list-style: none;
+        padding-top: 1rem;
+        font-size: 0.80rem;
+      }
+
+      .lista-cartao{
+        list-style: none;
+        padding-top: 1rem;
+        font-size: 0.80rem;
+        padding-bottom: 1rem;
+      }
+
+      .foto-pessoas{
+        display: none;
+        position: relative;
+        width: 50%; 
+        margin:40px;
+        animation: 3s move;
+      }
+
+     .foto-cartao {
+      background-color: transparent;
+      animation: spin 10s linear infinite;
+      width: 70%;
+      margin-left: 1rem ;
+      }
+
+        @keyframes spin {
+          0% {
+          transform: rotateZ(0deg);
+          }
+          100% {
+          transform: rotateZ(360deg);
+          }
+        }
+
+      .conteudo-conta-digital-pj{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #363636;
+        padding: 10px;
+        background-image: url("imagensF4BANK/foto-fundo4.png");
+        background-position: center;
+      }
+
+      .conteudo-conta-pj{
+        width: 100%;
+        height: 100%;
+        padding-left: 0.3rem;
+        font-size: 15px;
+        list-style: none;
+        padding-top: 0.5rem;
+        font-size: 0.80rem;
+        
+      }
+
+      .foto-escritorio{
+        display:none;
+        position: relative;
+        width: 50%;
+        /* margin: 100px; */
+        padding-right: 50px;
+        animation: 2s move;
+        
+      }
+
+      @keyframes move {
+        from {
+            right: 20%;
+        }
+        to {
+          right: 40%;
+        }
+      }
+    }
+
+    /* ===================  PARTE TRÊS=================== */
+
+@media screen and (max-width: 375px){    
+
+      .terceira-secao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #363636;
+        background-image: url("imagensF4BANK/foto-fundo2.png");
+        background-position: center;
+        background-color: #ff914d;
+        
+      }
+      
+      .texto-coracao{
+        display: block;
+        font-size: 1.20rem;
+        font-weight: bold;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-top: 1rem;
+        
+      }
+      
+      .texto-coracao2{
+        display: block;
+        font-size: 0.90rem;
+        line-height: 1.7;
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+      
+      .imagem-container03{
+          width: 100%;
+          padding-right: 0rem;
+          margin-left: 0.3rem;
+      }
+  }
+
+      /* =================== RODAPE=================== */
+      @media screen and (max-width: 375px){
+  
+        .containerFooter{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items:stretch;
+          background-color: #444140;
+          color: azure;
+          width: 100%;
+          height: auto;
+          padding: 2rem;
+          margin-top: auto;
+          clear: both;
+      }
+      
+      .parte1{
+          
+          border-bottom: 2px solid rgba(0, 0, 0, .06);
+          padding-bottom: 1rem;
+          margin-left: 0rem;
+      }
+      
+      .parte2{
+          padding: 1em;
+          align-self: center;
+          margin-right: 30rem;
+          font-size: 0.6rem;
+      }
+      
+      .lista-parte1{
+          list-style: none;
+      }
+      
+      footer div ul li a{
+          text-decoration: none;
+          color: white;
+      }
+      footer div ul li a:hover{
+          color: #F2884B;
+          transition: .2s;
+      }
+      
+      .texto1{
+          display: flex;
+          flex-direction: column;
+          padding: 1rem 1rem;
+          font-size: 0.6rem;
+      }
+      
+      .texto2{
+          display: flex;
+          flex-direction: column;
+          width: 20vw;
+          padding: 1rem 1rem;
+          font-size: 0.6rem;
+      }
+      
+      .texto3{
+          display: flex;
+          flex-direction: column;
+          margin-left: 5em;
+          font-size: 0.6rem;
+      }
+
+      .redesSociais{
+          cursor: pointer;
+          list-style: none;
+      }
+      
+      .redesSociais a img:hover{
+          color:  #F2884B;
+          transition: .2s;
+          list-style: none;
+      }
+      
+      .linkRedes {
+        display: flex;
+        list-style: none;
+        margin-left:0rem;
+        
+      }
+      
+      svg:hover path{
+          fill:  #F2884B;
+      }
+}
+  /* =================== RESPONSIVIDADE =================== */
+  @media screen and (max-width: 375px) {
+    .bx-menu-open{
+        display: block;
+    }
+
+    .menu-items{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        position: absolute;
+        width: 50%;
+        height: calc(100vh - 8rem);
+        top: 8rem;
+        left: -10%;
+        position: fixed;
+        width: 10vw;
+        height: 10vh;
+        top: var(--altura-menu);
+        left: -10%;
+        padding: 1rem;        
+        background-image: var(--cor-menu-mobile);
+        transition: linear .5s;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    #lista-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1rem;
+        width: 10%;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+    .item{
+        width: 100%;
+        text-align: center;
+    }
+
+    .bx-menu-open:hover {
+        height: 3.5rem ;
+        transition: .5s;
+    }
+
+    #check:checked .menu-items{ /* Se 'checked', ativa menu mobile!*/
+        left: 0;
+    }
+  }

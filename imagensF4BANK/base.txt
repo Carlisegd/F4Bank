@@ -1,0 +1,83 @@
+/* ===================================== GOOGLE FONTS ===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+/* ===================================== VARIABLES ===================================== */
+:root{
+    /* =================== COLOR =================== */
+    --cor-principal-menu: linear-gradient(90deg, #F2884B 30%, #F2AC52, #F29F80);;
+    --cor-menu-mobile: linear-gradient(90deg, #F2884B 30%, #F2AC59, #F29F80);
+    --cor-fonte-menu: white;
+    --cor-hover-menu: #444140;
+
+    /* =================== TYPOGRAPHY =================== */
+    --font-body: 'Nunito', sans-serif;
+
+    --altura-menu: 4rem;
+    --padding-vertical-menu: 0 2rem;
+    --padding-menu-items: .5rem;
+    --gap-menu-items-desktop: .5rem;
+    --border-radius-menu-items: 1rem;
+    --transicao-hover-menu-items: 1s;
+    --tamanho-logo-menu: 100%;
+    --icone-btn-mobile: 3rem;
+}
+
+/* =================== BASE =================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif; 
+}
+
+/* =================== MENU STYLING =================== */
+.container-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: var(--altura-menu);
+    padding: var(--padding-vertical-menu);
+    background-image: var(--cor-principal-menu);
+    z-index: 20;
+}
+
+.menu-items{
+    display: flex;
+    gap: var(--gap-menu-items-desktop);
+}
+
+#lista-menu{
+    list-style: none;
+}
+
+.item{
+    text-decoration: none;
+    padding: var(--padding-menu-items);
+    color: var(--cor-fonte-menu);
+    border-radius: var(--border-radius-menu-items);
+}
+
+.item:hover{
+    background-color: var(--cor-hover-menu);
+    transition: var(--transicao-hover-menu-items);
+}
+
+#logo-menu{
+    height: var(--tamanho-logo-menu);
+}
+
+#check{
+    display: none;
+}
+
+.bx-menu-open{
+    display: none;
+    height: var(--icone-btn-mobile);
+    cursor: pointer;
+}

@@ -1,0 +1,217 @@
+/* Container conteudo contato */
+
+.container-contato {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+/* Botão e background para abrir conta digital e o formulario */
+.conta-digital {
+  background-image: url(imagensF4BANK/homem-camisa.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conta-digital h1 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+
+
+.btn-conta-digital {
+  padding: 15px;
+  color: #fff;
+  background-color: #ff7a00;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+
+
+.btn-conta-digital:hover {
+  background-color: #b15500;
+}
+
+
+.box {
+  top: 0px;
+  height: 100vh;
+  position: fixed;
+  background-color: #444140;
+  padding: 15px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  right: 0px;
+  z-index: 2000;
+  display: none;
+}
+
+fieldset {
+  position: relative;
+  border: none;
+}
+
+legend {
+  position: relative;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.input {
+  position: relative;
+}
+
+.inputUsuario {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  width: 50%;
+  letter-spacing: 1px;
+}
+
+.label-contato {
+  position: absolute;
+  top: 0px;
+  left: 25%;
+  pointer-events: none;
+  transition: .5s;
+  text-align: center;
+  
+}
+
+.inputUsuario:focus ~ .label-contato, 
+.inputUsuario:valid ~ .label-contato {
+  top: -20px;
+  font-size: 12px;
+  color: #ff7a00;
+}
+
+#data_nascimento {
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#submit {
+  background-color: #ff7a00;
+  width: 50%;
+  border: none;
+  padding: 15px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+#submit:hover {
+  background-color: #b15500;
+}
+
+.fechar {
+  position: absolute;
+  font-size: 1em;
+  top: -60px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #ff7a00;
+  background: #ff7a00;
+  color: #fff;
+  cursor: pointer;
+}
+
+.box.mostrar {
+  display: block;
+}
+
+/* Estilização do conteudo */
+
+.container-contato {
+  margin-bottom: 20px;
+}
+
+.container-contato h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container-contato p {
+  font-size: 1.125em;
+  margin-bottom: 10px;
+}
+
+.email {
+  margin-top: 60px;
+  max-width: 300px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.telefone {
+  margin-top: 60px;
+  max-width: 300px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.sociais {
+  margin-top: 60px;
+  max-width: 300px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#email-contato {
+  display: inline-block;
+  color: #ff7a00;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 1.125em;
+}
+
+#telefone-contato {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.125em;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 800px) {
+  .conta-digital h1 {
+    width: 50vh;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .btn-conta-digital {
+    width: 30vh;
+  }
+
+  .fechar {
+    width: 30px;
+    height: 30px;
+    top: -126px;
+    right: -2px;
+  }
+}
